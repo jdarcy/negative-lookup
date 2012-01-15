@@ -26,3 +26,14 @@ This is intended to be a learning tool.  I might not get back to this code
 myself for a long time, but I always have time to help anyone who's learning to
 write translators.  If you want to help move it along, *please* fork and send
 me pull requests.
+
+For more information on writing GlusterFS translators, check out my "Translator
+101" series:
+
+* http://hekafs.org/index.php/2011/11/translator-101-class-1-setting-the-stage/
+
+* http://hekafs.org/index.php/2011/11/translator-101-lesson-2-init-fini-and-private-context/
+
+* http://hekafs.org/index.php/2011/11/translator-101-lesson-3-this-time-for-real/
+
+* http://hekafs.org/index.php/2011/11/translator-101-lesson-4-debugging-a-translator/
