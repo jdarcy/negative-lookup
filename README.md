@@ -1,5 +1,5 @@
-This is a very simple translator to cache "negative lookups" for workloads
-where the same file is looked up many times in places where it doesn't exit.
+This is a very simple translator to cache "negative lookups" for workloads in
+which the same file is looked up many times in places where it doesn't exist.
 In particular, web script files with many includes/requires and long paths can
 generate *hundreds* of such lookups per front-end request.  If we don't cache
 the negative results, this can mean hundreds of back-end network round trips
@@ -23,6 +23,6 @@ added.
 * Locking on the cache for when we're called concurrently.
 
 This is intended to be a learning tool.  I might not get back to this code
-myself for a long time, but I always time to help anyone who's learning to
+myself for a long time, but I always have time to help anyone who's learning to
 write translators.  If you want to help move it along, *please* fork and send
 me pull requests.
