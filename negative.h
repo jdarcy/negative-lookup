@@ -28,11 +28,22 @@
 #include "hashfn.h"
 
 #define GHOST_BUCKETS 64
-#define GHOST_HASH(x) (SuperFastHash(x,strlen(x)) % GHOST_BUCKETS)
+
+inline uint32_t
+GHOST_HASH (const unsigned char *x, const char *y)
+{
+        uint32_t        hash = 0;
+        
+        hash ^= SuperFastHash((const char *)x,sizeof(uuid_t));
+        hash ^= SuperFastHash(y,strlen(y));
+
+        return hash % GHOST_BUCKETS;
+}
 
 typedef struct _ghost {
-        struct _ghost *next;
-        char          *path;
+        struct _ghost   *next;
+        uuid_t           gfid;
+        char            *name;
 } ghost_t;
 
 typedef struct {
